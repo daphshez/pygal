@@ -444,6 +444,8 @@ class Graph(BaseGraph):
 
     def _get_value(self, values, i):
         """Get the value formatted for tooltip"""
+        if self.config.tooltip_formatter:
+            return self.config.tooltip_formatter(values,i)
         return self._format(values[i][1])
 
     def _points(self, x_pos):

@@ -315,6 +315,10 @@ class Config(CommonConfig):
     value_formatter = Key(
         None, type(lambda: 1), "Value",
         "A function to convert numeric value to strings")
+    
+    tooltip_formatter = Key(
+        None, type(lambda: 2), "Value",
+        "A function that receive series and point and formats a tooltip label")
 
     logarithmic = Key(
         False, bool, "Value", "Display values in logarithmic scale")
